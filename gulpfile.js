@@ -30,7 +30,7 @@ gulp.task('scripts' , function(){
 });
 
 gulp.task('css-libs' ,['sass'], function(){
-	return gulp.src('app/css/libs.css')
+	return gulp.src('app/css/*.css')
 	.pipe(cssnano())
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('app/css'));
